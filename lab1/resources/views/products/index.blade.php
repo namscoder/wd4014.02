@@ -10,6 +10,7 @@
     <th >name</th>
     <th>image</th>
     <th >price</th>
+        <th >action</th>
     </tr>
     </thead>
     @foreach($products as $product)
@@ -19,6 +20,7 @@
     <td>{{$product['name']}}</td>
     <td><img style="width: 100px" src="{{$product['image']}}"></td>
     <td>{{$product['price']}}</td>
+        <td><a class="btn btn-success" href="{{ route('detail', $product['id']) }}">Detail</a></td>
     </tr>
     </tbody>
     @endforeach
